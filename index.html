@@ -1,0 +1,92 @@
+<!-- The player will have to guess the answer, just like in Word Guess. This time, though, the player will guess with numbers instead of letters.
+
+Here's how the app works:
+
+There will be four crystals displayed as buttons on the page.
+
+The player will be shown a random number at the start of the game.
+
+When the player clicks on a crystal, it will add a specific amount of points to the player's total score.
+
+Your game will hide this amount until the player clicks a crystal.
+When they do click one, update the player's score counter.
+The player wins if their total score matches the random number from the beginning of the game.
+
+The player loses if their score goes above the random number.
+
+The game restarts whenever the player wins or loses.
+
+When the game begins again, the player should see a new random number. Also, all the crystals will have four new hidden values. Of course, the user's score (and score counter) will reset to zero.
+The app should show the number of games the player wins and loses. To that end, do not refresh the page as a means to restart the game.
+
+Option 1 Game design notes
+The random number shown at the start of the game should be between 19 - 120.
+
+Each crystal should have a random hidden value between 1 - 12. -->
+
+<!-- HWK #4: CRYSTAL GAME -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=`, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>HWK #4: CRYSTAL GAME </title>
+
+    <!-- Bootstrap CDN links -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js">
+
+    <!-- jQuery, javascript file for the Bootstrap's javascript file to function -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+
+    <!-- CSS Link -->
+    <link rel="stylesheet" href="./assets/css/style.css">
+
+</head>
+
+<body>
+    <div class="container">
+        <!-- Cystal Image Display -->
+        <div class="row">
+            <div class="col-md-3">
+                <img src="assets/images/Amethyst.jpg" alt="Amethyst" id="crystal1">
+            </div>
+            <div class="col-md-3">
+                <img src="assets/images/Diamond.jpg" alt="Diamond" id="crystal2">
+            </div>
+            <div class="col-md-3">
+                <img src="assets/images/Peridot.jpg" alt="Peridot" id="crystal3">
+            </div>
+            <div class="col-md-3">
+                <img src="assets/images/Ruby.jpg" alt="Ruby" id="crystal4">
+            </div>
+        </div>
+
+        <!-- Crystal Value# Display -->
+        <div class="row">
+            <div class="col-md-6">
+                <h2 id="crystalValue">35</h2>
+            </div>
+
+            <!-- Score Display -->
+            <div class="col-md-6">
+                <p>Wins: <span id="win"></span></p>
+            </div>
+            <div class="col-md-6">
+                <p>Losses: <span id="losses"></span></p>
+            </div>
+
+        </div>
+    </div>
+
+
+    
+
+    <!-- JavaScript -->
+    <script src="assets/javascript/game.js"></script>
+</body>
+
+</html>
