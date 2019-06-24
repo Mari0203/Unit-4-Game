@@ -1,15 +1,32 @@
-// Pesudo codes //
-// Generate a random number at the start game---should be between 19 - 120. //
+// Function to generate a random number (integer) between a specific range //
+// with minmum and maximum numbers being inclusive. //
+
+function getRandomNum(min, max) {
+    min = Math.ceil(min);
+    max = Math.floor(max);
+    return Math.floor(Math.random() * (max - min + 1)) + min;
+};
+
+// ===== At the start of the game ===== //
+// Generate a random number for the player to guess, and also assign randomly generated numbers for each crystal.
+
 var randomValue = 0;
+
 function startGame() {
-    randomValue = Math.floor(Math.random()* (120-19)) + 19;
+    randomValue = getRandomNum(19, 120);
+    // randomValue = Math.floor(Math.random() * (120-19)) + 19;
     console.log(randomValue);
 
-    // Generate random values for each crystals:
-    var crystal1 = Math.ceil(Math.random() * (12-1)) + 1;
-    var crystal2 = Math.ceil(Math.random() * (12-1)) + 1;
-    var crystal3 = Math.ceil(Math.random() * (12-1)) + 1;
-    var crystal4 = Math.ceil(Math.random() * (12-1)) + 1;
+    // Generate random values between 1 - 12 and assign them to each crystal:
+    var crystal1 = getRandomNum(1, 12);
+    var crystal2 = getRandomNum(1, 12);
+    var crystal3 = getRandomNum(1, 12);
+    var crystal4 = getRandomNum(1, 12);
+    
+    // var crystal1 = Math.ceil(Math.random() * (12-1)) + 1;
+    // var crystal2 = Math.ceil(Math.random() * (12-1)) + 1;
+    // var crystal3 = Math.ceil(Math.random() * (12-1)) + 1;
+    // var crystal4 = Math.ceil(Math.random() * (12-1)) + 1;
 
     // Assign the randomly generated value of each crystal to HTML crystal id's.
      $("#crystal1").attr("data-value") = crystal1;
