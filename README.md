@@ -22,4 +22,7 @@ The player will have to match the randomly selected number by clicking on any of
 
 5. The app shows the number of games the player wins and loses. 
 
+### Notes
+Refreshing / reloading the browser will reverts to original state, thus the game will restart with zero win/loss.  If you'd like to keep win/loss scores, do not hit reload button on the browser.
+
 ##### Enjoy!
