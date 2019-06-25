@@ -9,3 +9,9 @@ li {
 .crystal {
     cursor: pointer;
 }
+
+#footer {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: grey;
+    margin-top: 3rem;
+}
