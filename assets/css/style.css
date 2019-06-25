@@ -3,15 +3,28 @@ body {
 }
 
 li {
-    font-size: 12px;
+    font-size: 11px;
+}
+
+#random-number {
+    font-size: 30px;
+    color: red;
 }
 
 .crystal {
     cursor: pointer;
+    height: 120px;
+    width: 140px;
 }
 
 #footer {
     font-family: Georgia, 'Times New Roman', Times, serif;
     color: grey;
     margin-top: 3rem;
+}
+
+@media (max-width: 576px) {
+    .crystal {
+        size: 1rem;
+    }
 }
