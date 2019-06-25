@@ -13,8 +13,10 @@ li {
 
 .crystal {
     cursor: pointer;
-    height: 120px;
-    width: 140px;
+    padding: 2%;
+    margin: 2%;
+    /* height: 120px;
+    width: 140px; */
 }
 
 #footer {
@@ -23,8 +25,8 @@ li {
     margin-top: 3rem;
 }
 
-@media (max-width: 576px) {
-    .crystal {
-        size: 1rem;
+@media (max-width: 768px) {
+    h5 {
+        font-size: 80%;
     }
 }
