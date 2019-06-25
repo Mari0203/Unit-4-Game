@@ -1,32 +1,29 @@
-// Function to generate a random number (integer) between a specific range //
-// with minmum and maximum numbers being inclusive. //
+/* Function to generate a random number (integer) between a specific range 
+   with minmum and maximum numbers being inclusive. */
 
 function getRandomNum(min, max) {
     min = Math.ceil(min); 
     max = Math.floor(max);
     return Math.floor(Math.random() * (max - min + 1)) + min;
+
     // console.log("Math.random(): " + Math.random());
-    // console.log("Math.random() * (max - min): " + Math.random() * (max - min));
-    // console.log("getRandomNum return output: " + Math.floor[Math.random() * (max - min + 1)] + min);
+    // console.log("Math.random() * (max - min + 1): " + Math.random() * (max - min + 1));
 };
 
-// ===== At the start of the game ===== //
-// Generate a random number for the player to guess, and also assign randomly generated numbers for each crystal.
-
-// Global variables
+// Declare global variables:
 var numToMatch = 0;
 var playerScore = 0;
 var wins = 0;
 var losses = 0;
 
+//===== At the start of the game... ===== //
 function startGame() {
 
     // Set (reset) the scores to zero at the start of the game
     playerScore = 0;
 
+    // Generate random value for "Number To Match" and display it in UI.
     numToMatch = getRandomNum(19, 120);
-    
-    // Display the 'numToMatch' value in UI
     $("#random-number").html(numToMatch);
 
     // Generate random values between 1 - 12 and assign them to each crystal:
@@ -49,12 +46,12 @@ function startGame() {
      $("#crystal4").attr("data-value", crystal4);
 
     // Display Scores for Total Score, Wins & Losses
-    $("#playerScore").text(playerScore);
-    $("#wins").text(wins);
-    $("#losses").text(losses);
+    $("#playerScore").html(playerScore);
+    $("#wins").html(wins);
+    $("#losses").html(losses);
 };
 
-// When the user clicks the crystals, it generates a value:
+// When the player clicks the crystals, the app generates a hidden value:
 $(".crystal").on("click", function(e) { 
 
     // It stores randomly generated value for the crystal (the element) that was clicked.
